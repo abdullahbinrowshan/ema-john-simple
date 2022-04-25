@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header/Header';
 import Shop from './components/Shop/Shop';
@@ -6,6 +5,8 @@ import { Route, Routes } from 'react-router-dom';
 import Order from './components/Orders/Order';
 import Inventory from './components/Inventory/Inventory';
 import About from './components/About/About';
+import Login from './components/Login/Login';
+import SignUp from './components/SignUp/SignUp';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route path='/orders' element={<Order />}></Route>
         <Route path='/inventory' element={<Inventory />}></Route>
         <Route path='/about' element={<About />}></Route>
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<SignUp />} />
       </Routes>
     </div>
   );
