@@ -16,7 +16,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location?.state?.from?.pathname ||'/';
+    const from = location?.state?.from?.pathname || '/';
 
     const handleEmailBlur = event => {
         setEmail(event.target.value);
@@ -27,7 +27,7 @@ const Login = () => {
     }
 
     if (user) {
-        navigate(from, {replace: true});
+        navigate(from, { replace: true });
     }
 
     const handleUserSignIn = event => {

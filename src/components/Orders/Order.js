@@ -13,7 +13,7 @@ const Order = () => {
     const navigate = useNavigate();
 
     const handleRemoveProduct = product => {
-        const rest = cart.filter( pd => pd.id !== product.id);
+        const rest = cart.filter(pd => pd.id !== product.id);
         setCart(rest);
         removeFromDb(product.id)
     }
@@ -22,16 +22,16 @@ const Order = () => {
         <div className='shop-container'>
             <div className="review-items-container">
                 {
-                    cart.map(product => <ReviewItem 
+                    cart.map(product => <ReviewItem
                         key={product.id}
                         product={product}
-                        handleRemoveProduct = {handleRemoveProduct}
-                        />)
+                        handleRemoveProduct={handleRemoveProduct}
+                    />)
                 }
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>
-                        <button onClick={() => navigate('/shipment') }>Proceed Shipping</button>
+                    <button onClick={() => navigate('/shipment')}>Proceed Shipping</button>
                 </Cart>
             </div>
         </div>

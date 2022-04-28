@@ -14,8 +14,8 @@ const Header = () => {
     }
 
     return (
-        <nav className='header'> 
-            <img src={logo} alt=""/>
+        <nav className='header'>
+            <img src={logo} alt="" />
             <div>
                 <Link to="/shop">Shop</Link>
                 <Link to="/orders">Orders</Link>
@@ -23,8 +23,8 @@ const Header = () => {
                 <Link to="/about">About</Link>
                 {
                     user ?
-                    <button onClick={handleSignOut}>Sign out</button> :
-                    <Link to='/login'>Login</Link> }
+                        <button className='sign-out' onClick={handleSignOut}>Sign out</button> :
+                        <Link to='/login'>Login</Link>}
             </div>
         </nav>
     );

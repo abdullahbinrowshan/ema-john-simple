@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cart.css'
 
-const Cart = ({cart, children}) => {
+const Cart = ({ cart, children }) => {
 
     let total = 0;
     let shipping = 0;

@@ -5,7 +5,7 @@ import auth from '../../firebase.init';
 import './SignUp.css';
 
 const SignUp = () => {
-    const [email, setEmail ] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
@@ -14,7 +14,7 @@ const SignUp = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-      ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth);
 
     const handleEmailBlur = event => {
         setEmail(event.target.value);
@@ -32,7 +32,7 @@ const SignUp = () => {
 
     const handleCreateUser = event => {
         event.preventDefault();
-        if(password !== confirmPassword){
+        if (password !== confirmPassword) {
             setError("Your two passwords did't match");
             return;
         }
@@ -61,10 +61,10 @@ const SignUp = () => {
                         <label htmlFor="confirm-password">Confirm password</label>
                         <input onBlur={handleConfirmPasswordBlur} type="password" name="confirm-password" id="" required />
                     </div>
-                    <p style={{color: 'red'}}>{error}</p>
+                    <p style={{ color: 'red' }}>{error}</p>
                     <button className='form-submit' type="submit">Sign up</button>
                 </form>
-                <p style={{'text-align': 'center'}}>
+                <p style={{ 'text-align': 'center' }}>
                     Already have an account? <Link className='form-link' to='/login'>Login</Link>
                 </p>
                 <div className="or">

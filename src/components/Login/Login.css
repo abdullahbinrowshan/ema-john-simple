@@ -10,7 +10,7 @@
     box-shadow: -12px 13px #FFE0B3;
 }
 
-.form-title{
+.form-title {
     font-size: 35px;
     color: #2a414f;
     font-weight: 400;
@@ -45,7 +45,7 @@
     cursor: pointer;
 }
 
-.form-submit:hover{
+.form-submit:hover {
     background: rgba(255, 153, 0, 0.4);
 }
 
